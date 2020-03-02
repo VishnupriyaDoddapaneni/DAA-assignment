@@ -1,0 +1,24 @@
+# TEAM DETAILS
+Vishnupriya.D-1KS18CS119
+Sunaina Nayak-1KS18CS104
+Sandeep kumar-1KS18CS087
+# CONTRIBUTION
+logical approach-Vishnupriya.D
+coding-sunaina nayak
+debugging-sandeep kumar
+# INSTRUCTIONS
+Enter a number for checking circular prime.
+Desired output will be displayed.
+# DETAILS
+example:1193
+1193 is a circular prime number
+636
+636 is not a circular prime number
+# CHALLENGES
+Getting a logic for rotate operation.
+# KNOWLEDGE
+rotate operation.
+team work.
+
+
+
