@@ -1,0 +1,106 @@
+#include <stdio.h>
+int a[100],b[100];
+int count=0;
+
+int main()
+{
+    int m;
+    printf("Enter the number\n");
+    scanf("%d",&m);
+    int total;
+    total=number_of_digits(m);
+    int a[total];
+    for(int i=0;i<total;i++)
+    {
+        a[i]=m%10;
+        m=m/10;
+       
+    }
+    int c,d;
+    for(c=total-1,d=0;c>=0;c--,d++)
+    {
+        b[d]=a[c];
+    }
+    printf("\n");
+    printf("The rotations are:\n");
+    for(int i=0;i<total;i++)
+    {
+        prime_or_not(b,total);
+        
+        rotate(b,total);
+        
+    }
+    if(count==total)
+    {
+        printf("\nIT'S A CIRCULAR PRIME NUMBER.\n");
+    }
+    
+    else
+    {
+        printf("\nIT'S NOT A CIRCULAR PRIME NUMBER.\n");
+    }
+    
+     
+    
+    
+}
+int number_of_digits(int m)
+{
+    int total=0;
+    while(m!=0)
+    {
+        m=m/10;
+        total++;
+        
+        
+    }
+    return total;
+}
+
+
+void rotate(int b[],int total)
+{
+    int temp,i;
+    
+    temp=b[total-1];
+    
+    for(i=total-1;i>0;i--)
+    {
+        b[i]=b[i-1];
+    }
+    b[0]=temp;
+    printf("\n");
+    for(i=0;i<total;i++)
+    {
+         printf("%d  ",b[i]);
+    }
+   
+    
+}
+void prime_or_not(int b[],int total)
+{
+    
+    int p,number=0,flag=0;
+    for(int i=0;i<total;i++)
+    {
+        p=10;
+        while(b[i]>=p)
+        p*=10;
+        number*=p;
+        number+=b[i];
+    }
+    for(int j=2;j<=number/2;++j)
+    {
+        if(number%j==0)
+        flag=1;
+        break;
+        
+    }
+    if(flag==0)
+    {
+        count++;
+        
+    }
+    
+    
+}
